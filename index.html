@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Hierro Oculto - Prueba 1 (Nivel Pro)</title>
+    <style>
+        body {
+            font-family: 'Verdana', sans-serif;
+            background: linear-gradient(#ffe8e8, #ffffff);
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .pista {
+            background-color: #f9f9f9;
+            border: 2px dashed #999;
+            padding: 20px;
+            width: 250px;
+            height: 180px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+            position: relative;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .pista:hover {
+            background-color: #e0ffe0;
+        }
+        #codigo-section {
+            flex-basis: 100%;
+            text-align: center;
+            margin-top: 40px;
+        }
+        input[type="text"] {
+            padding: 10px;
+            font-size: 18px;
+            margin-top: 10px;
+            width: 220px;
+        }
+        button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 10px;
+            background-color: #ff5722;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #e64a19;
+        }
+        #mensajeFinal {
+            margin-top: 20px;
+            font-size: 20px;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="pista">
+        <strong>Pista Visible:</strong>  
+        <br><br>
+        "Suma todos los días de la semana y divide entre el número de pesas mágicas."
+        <br><br>
+        (Spoiler: esta pista es un ENGAÑO 🤭)
+    </div>
+    <!-- 
+        🌟 PISTA REAL 🌟
+        Primer dígito: Número de músculos principales involucrados en un curl de bíceps (2).
+    -->
+
+    <div class="pista">
+        <strong>Pista Visible:</strong>  
+        <br><br>
+        "Busca el peso máximo de la proteína dorada."
+        <br><br>
+        (Falso: ¡no existe tal proteína! 😅)
+    </div>
+    <!-- 
+        🌟 PISTA REAL 🌟
+        Segundo carácter: Primera letra de "Hierro" en mayúscula (H).
+    -->
+
+    <div class="pista">
+        <strong>Pista Visible:</strong>  
+        <br><br>
+        "Multiplica tu motivación por el número de abdominales que podrías hacer después de un atracón de pizza."
+        <br><br>
+        (También falso y confuso 🤯)
+    </div>
+    <!--
+        🌟 PISTA REAL 🌟
+        Tercer dígito: Número típico de series para hipertrofia normal (4).
+    -->
+
+    <div class="pista">
+        <strong>Pista Visible:</strong>  
+        <br><br>
+        "La respuesta es 999... o quizá no 👻"
+        <br><br>
+        (Obviamente FALSO).
+    </div>
+
+    <div class="pista">
+        <strong>¿Te rindes?</strong>  
+        <br><br>
+        "Tal vez sea hora de mirar más a fondo... 👀"
+    </div>
+    <!--
+        ⚡ PISTA FINAL ⚡
+        Código correcto = 2H4
+    -->
+
+    <div id="codigo-section">
+        <h2>Introduce el Código Secreto</h2>
+        <input type="text" id="codigo" placeholder="Escribe el código...">
+        <br>
+        <button onclick="verificarCodigo()">Desbloquear</button>
+        <div id="mensajeFinal"></div>
+    </div>
+
+    <script>
+        function verificarCodigo() {
+            const codigoIngresado = document.getElementById("codigo").value.trim();
+            if (codigoIngresado === "2H4") {
+                document.getElementById("mensajeFinal").innerHTML = "✅ ¡Perfecto! ¡Has desvelado el secreto del Hierro Oculto!";
+                document.getElementById("mensajeFinal").style.color = "green";
+            } else {
+                document.getElementById("mensajeFinal").innerHTML = "❌ Código incorrecto. Revisa bien...";
+                document.getElementById("mensajeFinal").style.color = "red";
+            }
+        }
+    </script>
+
+</body>
+</html>
